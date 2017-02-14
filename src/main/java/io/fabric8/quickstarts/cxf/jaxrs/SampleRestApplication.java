@@ -39,11 +39,21 @@ public class SampleRestApplication {
     @Bean
     public Server rsServer() {
         // setup CXF-RS
+    	Swagger2Feature swg= new Swagger2Feature();
+    	swg.setVersion("1.1A");
+    	swg.setContact("apiteam@abc.com");
+    	swg.setDescription("ABC Insurance Claim processing APIs ");
+    	swg.setLicense("GPL");
+    	swg.setTitle("ABC COMAPNY API Portfolio ");
+    	swg.setLicenseUrl("http://abc.PolicyProcedures.com");
+    
+    	
         JAXRSServerFactoryBean endpoint = new JAXRSServerFactoryBean();
         endpoint.setBus(bus);
-        endpoint.setServiceBeans(Arrays.<Object>asList(new HelloServiceImpl()));
+        endpoint.setServiceBeans(Arrays.<Object>asList( new ServiceStatusImpl()));
         endpoint.setAddress("/");
-        endpoint.setFeatures(Arrays.asList(new Swagger2Feature()));
+        endpoint.setFeatures(Arrays.asList(swg));
+        endpoint.setProvider(new com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider());
         return endpoint.create();
     }
 }
