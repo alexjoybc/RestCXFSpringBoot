@@ -1,12 +1,13 @@
 # Spring-Boot CXF REST service example
 
-This example demonstrates how you can use Apache CXF with Spring Boot
-based on a [fabric8 Java base image](https://github.com/fabric8io/base-images#java-base-images).
 
+This example demonstrates how you can use JBoss Fuse  with Spring Boot
 
-It uses Spring Boot to configure a little application that includes a CXF JAXRS endpoint with Swagger enabled.
-
-
+Install and start up OpenShift on your local machine
+Install FIS image stream definition into OpenShift (raw.githubusercontent.com/jboss-fuse/application-templates/application-templates-2.0.redhat-000026/fis-image-streams.json)
+--> Login into OpenSHift
+--> oc project openshift
+--> oc create -f fis-image-streams.json
 
 ### Building
 
