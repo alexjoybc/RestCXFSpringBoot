@@ -2,9 +2,14 @@
 
 
 This example demonstrates how you can use JBoss Fuse  with Spring Boot
+More at: https://access.redhat.com/documentation/en/red-hat-jboss-middleware-for-openshift/3/single/red-hat-jboss-fuse-integration-services-20-for-openshift
+
 
 Install and start up OpenShift on your local machine
 Install FIS image stream definition into OpenShift (raw.githubusercontent.com/jboss-fuse/application-templates/application-templates-2.0.redhat-000026/fis-image-streams.json)
+
+
+OpenShift:
 --> Login into OpenSHift
 --> oc project openshift
 --> oc create -f fis-image-streams.json
