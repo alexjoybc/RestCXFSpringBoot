@@ -3,6 +3,10 @@
 
 This example demonstrates how you can use JBoss Fuse  with Spring Boot
 More at: https://access.redhat.com/documentation/en/red-hat-jboss-middleware-for-openshift/3/single/red-hat-jboss-fuse-integration-services-20-for-openshift
+Make sure your repositiries are configured as shown in the above link !
+
+Since this was done during FIS2.0 preview; Start Jboss Dev Studio go to Properties --> Maven-->Archtypes
+ and add FIS2.0 archtype from https://maven.repository.redhat.com/earlyaccess/all/io/fabric8/archetypes/archetypes-catalog/2.2.180.redhat-000004/archetypes-catalog-2.2.180.redhat-000004-archetype-catalog.xml
 
 
 Install and start up OpenShift on your local machine
